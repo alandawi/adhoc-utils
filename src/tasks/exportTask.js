@@ -5,12 +5,13 @@ const rimraf = require('rimraf')
 const exportTask = async () => {
     await exportQuestions();
 
+    // TODO: Check of a index file if not, reject the task
+
     const outputFolder = 'banner_frames';
     const config = global.exportConfig;
     const size = config.size.split('x');
 
-    // Remove the folder
-    rimraf(outputFolder, () => {});
+    /* rimraf(outputFolder, () => {});
 
     await timesnap({
         url: 'index.html',
@@ -25,8 +26,14 @@ const exportTask = async () => {
         //duration: 1,               // for 20 virtual seconds 
         outputDirectory: outputFolder
     }).then(() => {
-        console.log('timesnap Finished');
-    });
+        console.log('Snapshot Finished');
+        resolve();
+        //return;
+    }); */
+
+
+
+    return;
 }
 
 module.exports = exportTask

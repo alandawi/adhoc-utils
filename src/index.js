@@ -22,9 +22,12 @@ global.appRoot = path.resolve(__dirname);
         case 'backupImage':
             await backupImageTask();
             break;
+        case 'extractFrames':
+            // TODO: Use ffmpeg to extract frames
+            break;
         default:
             console.log("DEFAULT TASK");
     }
 
-    
+    console.log("FINISH TOTAL");
 })();
