@@ -2,7 +2,8 @@ const path = require('path');
 const mainQuestions = require('./questions/mainQuestions');
 const backupImageTask = require('./tasks/backupImageTask');
 const exportTask = require('./tasks/exportTask');
-//const puppeteer = require('puppeteer');
+
+// https://www.npmjs.com/package/cli-progress
 
 // Globals
 global.mainTask = null;
@@ -25,7 +26,5 @@ global.appRoot = path.resolve(__dirname);
             console.log("DEFAULT TASK");
     }
 
-    // Detect files & subfiles
-
-    // Do the task
+    
 })();

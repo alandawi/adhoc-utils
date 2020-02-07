@@ -5,13 +5,24 @@ const exportQuestions = async () => {
         {
             type: 'text',
             name: 'size',
-            message: 'What is the size of the banner?'
+            message: 'Banner size:'
         },
         {
             type: 'text',
             name: 'duration',
-            message: 'What is the duration of the banner? (in seconds)'
+            message: 'Banner duration (in seconds):'
         },
+        {
+            type: 'select',
+            name: 'quality',
+            message: 'Select the output quality',
+            choices: [
+                { title: 'High', value: '1' },
+                { title: 'Medium', value: '0.6' },
+                { title: 'Low', value: '0.3' }
+            ],
+            initial: 0
+        }
     ];
 
     const response = await prompts(questions);

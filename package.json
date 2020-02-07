@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/alandawi/adhoc-utils#readme",
   "dependencies": {
-    "prompts": "^2.3.0"
+    "prompts": "^2.3.0",
+    "rimraf": "^3.0.1",
+    "timesnap": "^0.1.1"
   }
 }
