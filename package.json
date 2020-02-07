@@ -1,0 +1,33 @@
+{
+  "name": "adhoc-utils",
+  "version": "1.0.0",
+  "description": "Some tools to improve the teamwork",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alandawi/adhoc-utils.git"
+  },
+  "keywords": [
+    "optimization",
+    "productive",
+    "tools",
+    "utils"
+  ],
+  "bin": {
+    "adhoc-utils": "./bin/adhoc.js"
+  },
+  "preferGlobal": true,
+  "author": "Alan G. Dawidowicz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alandawi/adhoc-utils/issues"
+  },
+  "homepage": "https://github.com/alandawi/adhoc-utils#readme",
+  "dependencies": {
+    "prompts": "^2.3.0"
+  }
+}
