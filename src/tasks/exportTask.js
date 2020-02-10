@@ -1,6 +1,8 @@
 const exportQuestions = require('../questions/exportQuestions');
+const readFilesUtil = require('../utils/readFilesUtil');
 const timesnap = require('timesnap');
-const rimraf = require('rimraf')
+const rimraf = require('rimraf');
+const videoshow = require('videoshow');
 
 const exportTask = async () => {
     await exportQuestions();
@@ -11,7 +13,8 @@ const exportTask = async () => {
     const config = global.exportConfig;
     const size = config.size.split('x');
 
-    /* rimraf(outputFolder, () => {});
+    // Generate frames
+    rimraf(outputFolder, () => {});
 
     await timesnap({
         url: 'index.html',
@@ -29,9 +32,32 @@ const exportTask = async () => {
         console.log('Snapshot Finished');
         resolve();
         //return;
-    }); */
+    });
 
 
+    let images = [];
+
+    // Get the directory
+    await readFilesUtil(outputFolder)
+    .then(files => {
+        console.log(files)
+        images = files;
+    })
+    .catch(e => console.error(e));
+
+
+    // Process the video
+    videoshow(images)
+    .save('video.mp4')
+    .on('start', function (command) {
+        console.log('ffmpeg process started:', command)
+    })
+    .on('error', function (err) {
+        console.error('Error:', err)
+    })
+    .on('end', function (output) {
+        console.log('Video created in:', output)
+    })
 
     return;
 }

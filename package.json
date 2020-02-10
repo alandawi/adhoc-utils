@@ -28,8 +28,11 @@
   },
   "homepage": "https://github.com/alandawi/adhoc-utils#readme",
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "promisify": "^0.0.3",
     "prompts": "^2.3.0",
     "rimraf": "^3.0.1",
-    "timesnap": "^0.1.1"
+    "timesnap": "^0.1.1",
+    "videoshow": "^0.1.12"
   }
 }
