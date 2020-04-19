@@ -1,6 +1,7 @@
 const path = require('path');
 const mainQuestions = require('./questions/mainQuestions');
 const backupImageTask = require('./tasks/backupImageTask');
+const optimizeBuildedBannerTask = require('./tasks/optimizeBuildedBannerTask');
 const exportTask = require('./tasks/exportTask');
 
 // https://www.npmjs.com/package/cli-progress
@@ -16,11 +17,14 @@ global.appRoot = path.resolve(__dirname);
     console.log(global.mainTask);
 
     switch(global.mainTask) {
-        case 'export':
+        case 'exportBanner':
             await exportTask();
             break;
         case 'backupImage':
             await backupImageTask();
+            break;
+        case 'optimizeBuildedBanner':
+            await optimizeBuildedBannerTask();
             break;
         case 'extractFrames':
             // TODO: Use ffmpeg to extract frames

@@ -10,9 +10,10 @@ const mainQuestions = async () => {
                 { title: 'Export a banner to other format (image, video, etc)', value: 'export' },
                 { title: 'Generate a backup image from a banner', value: 'backupImage' },
                 { title: 'Extract frames of a video', value: 'extractFrames' },
-                { title: 'Another option....', value: 'another' }
+                { title: 'Optimize a builded banner', value: 'optimizeBuildedBanner' },
+                { title: 'Another option....', value: 'another' },
             ],
-            initial: 0
+            initial: 3
         },
     ];
 
