@@ -1,5 +1,5 @@
 {
-  "name": "adhoc-utils",
+  "name": "@alandawi/adhoc-utils",
   "version": "1.0.0",
   "description": "Some tools to improve the teamwork",
   "main": "src/index.js",

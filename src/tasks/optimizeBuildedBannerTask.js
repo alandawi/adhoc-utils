@@ -31,7 +31,7 @@ const optimizeBuildedBannerTask = async () => {
         const fileName = path.basename(file);
         let destinationFolder = null;
 
-        if (ext === '.png' || ext === '.gif'  || ext === '.jpg' || ext === '.jpeg') {
+        if (ext === '.png' || ext === '.gif'  || ext === '.jpg' || ext === '.jpeg' || ext === '.svg') {
             destinationFolder = 'img';
         } else if (ext === '.js') {
             destinationFolder = 'js';
