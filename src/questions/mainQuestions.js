@@ -13,7 +13,7 @@ const mainQuestions = async () => {
                 { title: 'Optimize a builded banner', value: 'optimizeBuildedBanner' },
                 { title: 'Another option....', value: 'another' },
             ],
-            initial: 3
+            initial: 0
         },
     ];
 

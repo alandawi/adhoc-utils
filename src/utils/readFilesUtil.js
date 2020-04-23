@@ -12,4 +12,5 @@ const readFilesUtil = async (dir) => {
     }));
     return files.reduce((a, f) => a.concat(f), []);
 }
+
 module.exports = readFilesUtil

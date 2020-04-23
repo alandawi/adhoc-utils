@@ -1,17 +1,8 @@
 const readFilesUtil = require('../utils/readFilesUtil');
+const replaceAll = require('../utils/replaceAll');
 const moveFile = require('move-file');
 const path = require('path');
 const editFile = require("edit-file")
-
-// TODO: Move to utils
-const escapeRegExp = (string) => {
-    return string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&');
-}
-
-// TODO: Move to utils
-const replaceAll = (str, find, replace) => {
-    return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
-}
 
 const optimizeBuildedBannerTask = async () => {
     let folder = [];
@@ -48,14 +39,14 @@ const optimizeBuildedBannerTask = async () => {
 
     // TODO: remove setTimeout, use EventEmitter
     setTimeout(() => {
-        editFile(`${currentLocation}/index.html`, text => text.replace('style.css', 'css/style.css').replace('./main.js', 'js/main.js'), err => {
-            console.log(err);
-            //if (err) throw err
+        editFile(`${currentLocation}/index.html`, text => text.replace('./main.js', 'js/main.js').replace('style.css', 'css/style.css'), err => {
+            console.error(err);
+            if (err) throw err
         })
     
         editFile(`${currentLocation}/css/style.css`, text => replaceAll(text, 'background:url(', 'background:url(../img/'), err => {
-            console.log(err);
-            //if (err) throw err
+            console.error(err);
+            if (err) throw err
         })
     }, 3000)
 }
