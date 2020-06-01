@@ -1,6 +1,7 @@
 const prompts = require('prompts');
 
 const exportQuestions = async () => {
+    console.log("exportQuestions");
     const questions = [
         {
             type: 'text',
@@ -11,7 +12,7 @@ const exportQuestions = async () => {
             type: 'text',
             name: 'duration',
             message: 'Banner duration (in seconds):'
-        },
+        }/* ,
         {
             type: 'select',
             name: 'quality',
@@ -22,7 +23,7 @@ const exportQuestions = async () => {
                 { title: 'Low', value: '0.3' }
             ],
             initial: 0
-        }
+        } */
     ];
 
     const response = await prompts(questions);
