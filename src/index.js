@@ -13,7 +13,7 @@ global.folderRoot = path.resolve();
     await mainQuestions();
 
     switch(global.mainTask) {
-        case 'export':
+        case 'bannerToVideo':
             await bannerToVideo();
             break;
         case 'backupImage':

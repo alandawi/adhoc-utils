@@ -6,7 +6,6 @@ const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
 const exportTask = async () => {
     await exportQuestions();
 
-    const outputFolder = 'banner_frames';
     const config = global.exportConfig;
     const size = config.size.split('x');
 
