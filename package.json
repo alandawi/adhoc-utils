@@ -31,14 +31,11 @@
     "@ffmpeg-installer/ffmpeg": "^1.0.20",
     "edit-file": "^0.3.0",
     "fluent-ffmpeg": "^2.1.2",
-    "minimist": "^1.2.5",
     "move-file": "^1.2.0",
     "promisify": "^0.0.3",
     "prompts": "^2.3.0",
     "puppeteer": "^3.2.0",
-    "puppeteer-recorder": "^1.0.7",
     "rimraf": "^3.0.1",
-    "timesnap": "^0.1.1",
-    "videoshow": "^0.1.12"
+    "timesnap": "^0.1.1"
   }
 }
