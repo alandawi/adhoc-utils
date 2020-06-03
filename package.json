@@ -34,7 +34,7 @@
     "move-file": "^1.2.0",
     "promisify": "^0.0.3",
     "prompts": "^2.3.0",
-    "puppeteer": "^3.2.0",
+    "puppeteer": "^3.3.0",
     "rimraf": "^3.0.1"
   }
 }
